@@ -11,6 +11,7 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
+  var gameWidth = game.offsetWidth
   var leftNumbers = dodger.style.left.replace('px', '');
   var left = parseInt(leftNumbers, 10);
  
