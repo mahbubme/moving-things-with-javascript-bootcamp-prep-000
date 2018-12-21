@@ -9,7 +9,7 @@ function moveDodgerLeft() {
   }
 }
 
-function moveDodgerRigth() {
+function moveDodgerRight() {
   var rightNumbers = dodger.style.right.replace('px', '');
   var right = parseInt(rightNumbers, 10);
  
@@ -19,10 +19,12 @@ function moveDodgerRigth() {
 }
 
 document.addEventListener('keydown', function(e) {
+  console.log(e.which);
+  
   if (e.which === 37) {
     moveDodgerLeft()
   }
   else if( e.which === 39 ) {
-    moveDodgerRigth()
+    moveDodgerRight()
   }
 })
