@@ -1,4 +1,5 @@
 var dodger = document.getElementById('dodger');
+var game = document.getElementById('game');
 
 function moveDodgerLeft() {
   var leftNumbers = dodger.style.left.replace('px', '');
@@ -11,11 +12,9 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   var leftNumbers = dodger.style.left.replace('px', '');
-  console.log(dodger.style.right);
-  
   var left = parseInt(leftNumbers, 10);
  
-  if (left > 0) {
+  if (left < 400) {
     dodger.style.left = `${left + 1}px`;
   }
 }
